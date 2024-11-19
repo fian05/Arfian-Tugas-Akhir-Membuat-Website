@@ -1,0 +1,166 @@
+/* Atas */
+header {
+    display: inline;
+}
+
+a {
+    color: green;
+    text-decoration: none;
+}
+
+.jumbotron {
+    font-size: 20px;
+    padding: 40px;
+    background-color: #1e1e1e;
+    border-bottom: 1px solid #444444;
+    text-align: center;
+    color: white;
+
+    h1 {
+        text-transform: uppercase;
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    }
+
+    p {
+        text-transform: capitalize;
+    }
+}
+
+nav {
+    background-color: #1e1e1e;
+    padding: 5px;
+    position: sticky;
+    top: 0;
+
+    ul {
+        padding-inline: 4rem;
+        display: flex;
+        gap: 2rem;
+
+        ul {
+            display: none;
+            position:absolute;
+        }
+
+        li:hover > ul {
+            display: block;
+            color: white;
+            padding: 0;
+            background-color: #1e1e1e;
+
+            a {
+                color: white;
+            }
+          }
+          
+        .sub-menu {
+            li {
+              display: flex;
+              padding: 1rem;
+            }
+            
+            li:hover, li a:hover {
+              color: green;
+            }
+        }
+    }
+
+    li {
+        list-style-type: none;
+    }
+
+    a {
+        font-size: 18px;
+        font-weight: 400;
+        text-decoration: none;
+        color: white;
+    }
+
+    a:hover {
+        font-weight: bold;
+        color: green;
+    }
+
+    .menu > a:after{
+        content: ' \1F853';
+      }
+}
+
+/* Tengah */
+main {
+    padding: 20px;
+    display: flex;
+    gap: 1.5rem;
+}
+
+#content {
+    flex: 5;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem 2rem;
+}
+
+aside {
+    flex: 1;
+}
+
+.gambar {
+    max-width: 400px;
+}
+
+.kotak {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+#profil {
+    header {
+        text-align: center;
+    }
+
+    img {
+        width: 200px;
+    }
+
+    table, th, td {
+        padding: 4px;
+    }
+
+    th {
+        vertical-align: top;
+        text-align: left;
+    }
+}
+
+/* Bawah */
+footer {
+    padding: 20px;
+    color: white;
+    background-color: #1e1e1e;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Perangkat dengan lebar layar 1200px dan di bawahnya */
+@media screen and (max-width: 1200px) {
+    main {
+        flex-flow: column nowrap;
+    }
+    main aside {
+        align-self: center;
+    }
+}
+/* Perangkat dengan lebar layar 768px dan di bawahnya */
+@media screen and (max-width: 768px) {
+    nav ul {
+        justify-content: center;
+    }
+    main aside {
+        align-self: stretch;
+    }
+}
